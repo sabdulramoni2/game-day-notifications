@@ -147,9 +147,6 @@ cd game-day-notifications
 ### **Test the System**
 1. Open the Lambda function in the AWS Management Console.
 2. Create a test event to simulate execution.
-
-![testing the code](image-6.png)
-
 3. Run the function and check CloudWatch Logs for errors.
 4. Verify that SMS notifications are sent to the subscribed users.
 

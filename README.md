@@ -51,7 +51,7 @@ game-day-notifications/
 
 ### **Clone the Repository**
 ```bash
-git clone https://github.com/ifeanyiro9/game-day-notifications.git
+git clone https://github.com/sabdulramoni2/game-day-notifications.git
 cd game-day-notifications
 ```
 
@@ -61,6 +61,8 @@ cd game-day-notifications
 3. Click Create Topic and select Standard as the topic type.
 4. Name the topic (e.g., gd_topic) and note the ARN.
 5. Click Create Topic.
+
+![sns topic created](image-5.png)
 
 ### **Add Subscriptions to the SNS Topic**
 1. After creating the topic, click on the topic name from the list.
@@ -77,6 +79,9 @@ cd game-day-notifications
 5. If you added an Email subscription:
 - Check the inbox of the provided email address.
 - Confirm the subscription by clicking the confirmation link in the email.
+
+![SNS sub](image-4.png)
+
 6. For SMS, the subscription will be immediately active after creation.
 
 ### **Create the SNS Publish Policy**
@@ -102,6 +107,8 @@ cd game-day-notifications
 8. Review and click Create Role.
 9. Copy and save the ARN of the role for use in the Lambda function.
 
+![IAM role for lambda function](image-3.png)
+
 ### **Deploy the Lambda Function**
 1. Open the AWS Management Console and navigate to the Lambda service.
 2. Click Create Function.
@@ -113,9 +120,13 @@ cd game-day-notifications
 - Copy the content of the src/gd_notifications.py file from the repository.
 - Paste it into the inline code editor.
 8. Under the Environment Variables section, add the following:
+
+![env](image-2.png)
+
 - NBA_API_KEY: your NBA API key.
 - SNS_TOPIC_ARN: the ARN of the SNS topic created earlier.
 9. Click Create Function.
+![function](image-1.png)
 
 
 ### **Set Up Automation with Eventbridge**
@@ -124,6 +135,8 @@ cd game-day-notifications
 3. Select Event Source: Schedule.
 4. Set the cron schedule for when you want updates (e.g., hourly).
 5. Under Targets, select the Lambda function (gd_notifications) and save the rule.
+![Eventbridge](image.png)
+
 
 
 ### **Test the System**

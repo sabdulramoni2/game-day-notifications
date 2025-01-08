@@ -137,7 +137,10 @@ cd game-day-notifications
 3. Select Event Source: Schedule.
 4. Set the cron schedule for when you want updates (e.g., hourly).
 5. Under Targets, select the Lambda function (gd_notifications) and save the rule.
+
 ![Eventbridge](image.png)
+
+![alt text](image-10.png)
 
 
 
@@ -150,7 +153,7 @@ cd game-day-notifications
 3. Run the function and check CloudWatch Logs for errors.
 4. Verify that SMS notifications are sent to the subscribed users.
 
-![sns sent to eamil](image-7.png)
+!![emailsent to subscriber](image-9.png)
 
 
 ### **What We Learned**

@@ -153,7 +153,7 @@ cd game-day-notifications
 3. Run the function and check CloudWatch Logs for errors.
 4. Verify that SMS notifications are sent to the subscribed users.
 
-!![emailsent to subscriber](image-9.png)
+![alt text](image-11.png)
 
 
 ### **What We Learned**

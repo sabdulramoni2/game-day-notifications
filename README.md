@@ -94,6 +94,8 @@ cd game-day-notifications
 7. Enter a name for the policy (e.g., gd_sns_policy).
 8. Review and click Create Policy.
 
+![SNS policy](image-8.png)
+
 ### **Create an IAM Role for Lambda**
 1. Open the IAM service in the AWS Management Console.
 2. Click Roles → Create Role.
@@ -142,8 +144,13 @@ cd game-day-notifications
 ### **Test the System**
 1. Open the Lambda function in the AWS Management Console.
 2. Create a test event to simulate execution.
+
+![testing the code](image-6.png)
+
 3. Run the function and check CloudWatch Logs for errors.
 4. Verify that SMS notifications are sent to the subscribed users.
+
+![sns sent to eamil](image-7.png)
 
 
 ### **What We Learned**

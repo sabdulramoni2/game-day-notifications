@@ -62,7 +62,7 @@ cd game-day-notifications
 4. Name the topic (e.g., gd_topic) and note the ARN.
 5. Click Create Topic.
 
-![sns topic created](image-5.png)
+![sns topic created](pics/image-5.png)
 
 ### **Add Subscriptions to the SNS Topic**
 1. After creating the topic, click on the topic name from the list.
@@ -80,7 +80,7 @@ cd game-day-notifications
 - Check the inbox of the provided email address.
 - Confirm the subscription by clicking the confirmation link in the email.
 
-![SNS sub](image-4.png)
+![SNS sub](pics/image-4.png)
 
 6. For SMS, the subscription will be immediately active after creation.
 
@@ -94,7 +94,7 @@ cd game-day-notifications
 7. Enter a name for the policy (e.g., gd_sns_policy).
 8. Review and click Create Policy.
 
-![SNS policy](image-8.png)
+![SNS policy](pics/image-8.png)
 
 ### **Create an IAM Role for Lambda**
 1. Open the IAM service in the AWS Management Console.
@@ -109,7 +109,7 @@ cd game-day-notifications
 8. Review and click Create Role.
 9. Copy and save the ARN of the role for use in the Lambda function.
 
-![IAM role for lambda function](image-3.png)
+![IAM role for lambda function](pics/image-3.png)
 
 ### **Deploy the Lambda Function**
 1. Open the AWS Management Console and navigate to the Lambda service.
@@ -123,12 +123,12 @@ cd game-day-notifications
 - Paste it into the inline code editor.
 8. Under the Environment Variables section, add the following:
 
-![env](image-2.png)
+![env](pics/image-2.png)
 
 - NBA_API_KEY: your NBA API key.
 - SNS_TOPIC_ARN: the ARN of the SNS topic created earlier.
 9. Click Create Function.
-![function](image-1.png)
+![function](pics/image-1.png)
 
 
 ### **Set Up Automation with Eventbridge**
@@ -138,9 +138,9 @@ cd game-day-notifications
 4. Set the cron schedule for when you want updates (e.g., hourly).
 5. Under Targets, select the Lambda function (gd_notifications) and save the rule.
 
-![Eventbridge](image.png)
+![Eventbridge](pics/image.png)
 
-![alt text](image-10.png)
+![alt text](pics/image-10.png)
 
 
 
@@ -150,7 +150,7 @@ cd game-day-notifications
 3. Run the function and check CloudWatch Logs for errors.
 4. Verify that SMS notifications are sent to the subscribed users.
 
-![alt text](image-11.png)
+![alt text](pics/image-11.png)
 
 
 ### **What We Learned**
